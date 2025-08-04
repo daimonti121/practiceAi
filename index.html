@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Page</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Left slider -->
+            <div class="slider">
+                <div class="main-image" id="mainImage">
+                    <img
+                        src="https://img.freepik.com/premium-vector/red-cube-with-pixel-art-style_475147-166.jpg"
+                        alt="Main View"
+                    />
+                    <div class="authenticated-badge">Authenticated</div>
+                </div>
+                <div class="thumbnails" id="thumbnails">
+                    <img
+                        src="https://img.freepik.com/premium-vector/red-cube-with-pixel-art-style_475147-166.jpg"
+                        data-full="https://img.freepik.com/premium-vector/red-cube-with-pixel-art-style_475147-166.jpg"
+                        class="active"
+                        tabindex="0"
+                    />
+                    <img
+                        src="https://img.freepik.com/premium-vector/blue-cube-with-pixel-art-style_475147-130.jpg"
+                        data-full="https://img.freepik.com/premium-vector/blue-cube-with-pixel-art-style_475147-130.jpg"
+                        tabindex="0"
+                    />
+                    <img
+                        src="https://img.freepik.com/premium-vector/green-cube-with-pixel-art-style_475147-147.jpg"
+                        data-full="https://img.freepik.com/premium-vector/green-cube-with-pixel-art-style_475147-147.jpg"
+                        tabindex="0"
+                    />
+                    <img
+                        src="https://img.freepik.com/premium-vector/blue-cube-with-pixel-art-style_475147-130.jpg"
+                        data-full="https://img.freepik.com/premium-vector/blue-cube-with-pixel-art-style_475147-130.jpg"
+                        tabindex="0"
+                    />
+
+                    <img
+                        src="https://img.freepik.com/premium-vector/green-cube-with-pixel-art-style_475147-147.jpg"
+                        data-full="https://img.freepik.com/premium-vector/green-cube-with-pixel-art-style_475147-147.jpg"
+                        tabindex="0"
+                    />
+                    <img
+                        src="https://img.freepik.com/premium-vector/red-cube-with-pixel-art-style_475147-166.jpg"
+                        data-full="https://img.freepik.com/premium-vector/red-cube-with-pixel-art-style_475147-166.jpg"
+                        tabindex="0"
+                    />
+                </div>
+            </div>
+
+            <!-- Right panel -->
+            <div class="product-info">
+                <h2 class="product-name">Sp5der P*nk Hoodie 'Black'</h2>
+                <div class="brand-name">SP5DER</div>
+                <div class="rating">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <span class="review-count">10 reviews</span>
+                </div>
+                <p class="price">
+                    <span class="sale-price">$156.00</span>
+                    <span class="old-price">$319.99</span>
+                    <span class="discount">51% OFF</span>
+                </p>
+                <div class="size-section">
+                    <div class="size-header">
+                        <span class="size-label">Size</span>
+                        <span class="size-chart-link" onclick="openModal()"
+                            >Size Chart</span
+                        >
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal()"
+                                    >&times;</span
+                                >
+                                <h2>Size Chart</h2>
+                                <div class="switch">
+                                    <div class="toggle" onclick="toggleUnits()">
+                                        <div class="slider"></div>
+                                    </div>
+                                </div>
+                                <table id="sizeTable">
+                                    <tr>
+                                        <th>Size</th>
+                                        <th>Chest</th>
+                                        <th>Length</th>
+                                        <th>Sleeve</th>
+                                        <th>Shoulder</th>
+                                    </tr>
+                                    <tr>
+                                        <td>S</td>
+                                        <td id="sChest">106</td>
+                                        <td id="sLength">68</td>
+                                        <td id="sSleeve">63</td>
+                                        <td id="sShoulder">48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>M</td>
+                                        <td id="mChest">112</td>
+                                        <td id="mLength">71</td>
+                                        <td id="mSleeve">65</td>
+                                        <td id="mShoulder">50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>L</td>
+                                        <td id="lChest">124</td>
+                                        <td id="lLength">77</td>
+                                        <td id="lSleeve">69</td>
+                                        <td id="lShoulder">54</td>
+                                    </tr>
+                                    <tr>
+                                        <td>XL</td>
+                                        <td id="xlChest">130</td>
+                                        <td id="xlLength">80</td>
+                                        <td id="xlSleeve">71</td>
+                                        <td id="xlShoulder">56</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-selector">
+                        <button class="size-button" onclick="selectSize(this)">
+                            S
+                        </button>
+                        <button class="size-button" onclick="selectSize(this)">
+                            M
+                        </button>
+                        <button class="size-button unavailable">L</button>
+                        <button class="size-button" onclick="selectSize(this)">
+                            XL
+                        </button>
+                    </div>
+                </div>
+                <button class="add-to-cart">ADD TO CART</button>
+                <div class="guarantee-text">30 days money back guaranteed</div>
+                <div class="stock-message">
+                    <span class="in-stock">In stock.</span> Order now to receive
+                    Tuesday 22 July
+                </div>
+                <div class="condition-block">
+                    <span class="condition-label">Condition:</span>
+                    <span class="condition-value">New</span>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header fisrt">
+                            <span class="accordion-icon-symbol">📄</span
+                            ><span>Details</span>
+                        </button>
+                        <div class="accordion-content">
+                            Experience the ultimate in streetwear luxury with
+                            the Sp5der P*nk Hoodie. This limited-edition piece
+                            features premium cotton construction, signature
+                            spider web graphics, and an oversized fit that
+                            defines contemporary street style. The bold pink
+                            accents against the black base create a striking
+                            visual impact that's become synonymous with the
+                            Sp5der brand.<br /><br />
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="accordion-icon-symbol">🛡️</span
+                            ><span>Authenticity</span>
+                        </button>
+                        <div class="accordion-content">
+                            Every item sold on DripHeat is guaranteed 100%
+                            authentic. Our expert authentication team inspects
+                            each piece using a multi-point verification process.
+                            This hoodie comes with our Certificate of
+                            Authenticity and is backed by our authenticity
+                            guarantee.<br /><br />
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="accordion-icon-symbol">🚚</span
+                            ><span>Shipping</span>
+                        </button>
+                        <div class="accordion-content">
+                            Free express shipping on all orders over $200.
+                            Standard shipping takes 3-5 business days, while
+                            express shipping delivers within 1-2 business days.
+                            All items are shipped with full insurance and
+                            tracking. International shipping available to select
+                            countries.<br /><br />
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="accordion-icon-symbol">↻</span
+                            ><span>Return & Refund</span>
+                        </button>
+                        <div class="accordion-content">
+                            We offer a 14-day return window for all unworn items
+                            with original tags attached. Items must be in the
+                            same condition as received. Once we receive and
+                            inspect your return, refunds are processed within
+                            3-5 business days to your original payment
+                            method.<br /><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fullscreen slider -->
+        <div class="fullscreen-slider" id="fullscreenSlider">
+            <span class="close-btn" id="closeFullscreen">&times;</span>
+            <span class="arrow left" id="prevSlide">&#10094;</span>
+            <img src="" id="fullscreenImage" />
+            <span class="arrow right" id="nextSlide">&#10095;</span>
+        </div>
+
+        <!-- Customer Reviews Section -->
+        <div class="reviews-section">
+            <div class="reviews-container">
+                <div class="reviews-header">
+                    <h2 class="reviews-title">OUR CUSTOMER REVIEWS</h2>
+                    <div class="reviews-summary">
+                        <div class="review-stars">
+                            <span class="review-star">★</span>
+                            <span class="review-star">★</span>
+                            <span class="review-star">★</span>
+                            <span class="review-star">★</span>
+                            <span class="review-star">★</span>
+                        </div>
+                        <span class="review-count">2,933 Reviews</span>
+                    </div>
+                    <div class="reviews-controls">
+                        <button class="sort-dropdown">
+                            Most Recent <span style="font-size: 12px">▼</span>
+                        </button>
+                        <button class="filter-button">
+                            <svg
+                                class="filter-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M3 4h18M3 12h12M3 20h6"></path>
+                            </svg>
+                            Filter
+                        </button>
+                        <button class="write-review-button">
+                            WRITE A REVIEW
+                        </button>
+                    </div>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header-row">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Davarius E.</span>
+                                <span class="verified-badge">Verified</span>
+                            </div>
+                            <span class="review-date">2 days ago</span>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">
+                            Fire hoodie! The quality is insane and it fits
+                            perfectly. The spider web design is clean and the
+                            pink accents really pop. Shipping was fast and the
+                            authentication process gave me peace of mind. Worth
+                            every penny!
+                        </p>
+                        <div class="review-media">
+                            <div class="media-item">Customer photo</div>
+                            <div class="media-item">Customer photo</div>
+                            <div class="media-item">
+                                Customer video
+                                <div class="video-overlay">▶</div>
+                            </div>
+                        </div>
+                        <div class="product-tag">
+                            <div class="product-tag-image">👕</div>
+                            <div class="product-tag-info">
+                                <div class="product-tag-name">
+                                    Sp5der P*nk Hoodie Black
+                                </div>
+                                <div class="product-tag-brand">SP5DER</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header-row">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Maria K.</span>
+                                <span class="verified-badge">Verified</span>
+                            </div>
+                            <span class="review-date">1 week ago</span>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">
+                            Absolutely love this hoodie! The oversized fit is
+                            exactly what I was looking for. The material is
+                            thick and high quality. DripHeat's authentication
+                            process is legit - you can tell this is the real
+                            deal. Already eyeing my next purchase!
+                        </p>
+                        <div class="review-media">
+                            <div class="media-item">Customer photo</div>
+                        </div>
+                        <div class="product-tag">
+                            <div class="product-tag-image">👕</div>
+                            <div class="product-tag-info">
+                                <div class="product-tag-name">
+                                    Sp5der P*nk Hoodie Black
+                                </div>
+                                <div class="product-tag-brand">SP5DER</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header-row">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Tyler M.</span>
+                                <span class="verified-badge">Verified</span>
+                            </div>
+                            <span class="review-date">2 weeks ago</span>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star" style="color: #ddd">★</span>
+                        </div>
+                        <p class="review-text">
+                            Great hoodie overall! The design is sick and quality
+                            is top notch. Only reason for 4 stars is I wish it
+                            was slightly less oversized, but that's just
+                            personal preference. Fast shipping and great
+                            customer service from DripHeat.
+                        </p>
+                        <div class="product-tag">
+                            <div class="product-tag-image">👕</div>
+                            <div class="product-tag-info">
+                                <div class="product-tag-name">
+                                    Sp5der P*nk Hoodie Black
+                                </div>
+                                <div class="product-tag-brand">SP5DER</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header-row">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Jessica L.</span>
+                                <span class="verified-badge">Verified</span>
+                            </div>
+                            <span class="review-date">3 weeks ago</span>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">
+                            This is my third purchase from DripHeat and they
+                            never disappoint! The Sp5der hoodie is exactly as
+                            described. The authentication badge gives you
+                            confidence you're getting the real thing. Quality is
+                            unmatched!
+                        </p>
+                        <div class="review-media">
+                            <div class="media-item">Customer photo</div>
+                            <div class="media-item">Customer photo</div>
+                        </div>
+                        <div class="product-tag">
+                            <div class="product-tag-image">👕</div>
+                            <div class="product-tag-info">
+                                <div class="product-tag-name">
+                                    Sp5der P*nk Hoodie Black
+                                </div>
+                                <div class="product-tag-brand">SP5DER</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header-row">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Anthony R.</span>
+                                <span class="verified-badge">Verified</span>
+                            </div>
+                            <span class="review-date">1 month ago</span>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star" style="color: #ddd">★</span>
+                            <span class="star" style="color: #ddd">★</span>
+                        </div>
+                        <p class="review-text">
+                            Hoodie is authentic and the quality is there, but
+                            the sizing runs huge. I'm usually an L and should've
+                            gone with M. The authentication process is great
+                            though. Will definitely order again but size down
+                            next time.
+                        </p>
+                        <div class="review-media">
+                            <div class="media-item">Customer photo</div>
+                            <div class="media-item">
+                                Customer video
+                                <div class="video-overlay">▶</div>
+                            </div>
+                        </div>
+                        <div class="product-tag">
+                            <div class="product-tag-image">👕</div>
+                            <div class="product-tag-info">
+                                <div class="product-tag-name">
+                                    Sp5der P*nk Hoodie Black
+                                </div>
+                                <div class="product-tag-brand">SP5DER</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header-row">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Sarah T.</span>
+                                <span class="verified-badge">Verified</span>
+                            </div>
+                            <span class="review-date">1 month ago</span>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-text">
+                            Best streetwear purchase I've made! The spider web
+                            design is so clean and the pink accents really make
+                            it pop. Got so many compliments already. DripHeat's
+                            authentication gives me peace of mind that I got the
+                            real deal.
+                        </p>
+                        <div class="review-media">
+                            <div class="media-item">Customer photo</div>
+                            <div class="media-item">Customer photo</div>
+                            <div class="media-item">Customer photo</div>
+                        </div>
+                        <div class="product-tag">
+                            <div class="product-tag-image">👕</div>
+                            <div class="product-tag-info">
+                                <div class="product-tag-name">
+                                    Sp5der P*nk Hoodie Black
+                                </div>
+                                <div class="product-tag-brand">SP5DER</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
