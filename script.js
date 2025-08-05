@@ -1,6 +1,7 @@
 // Elements
 const mainImage = document.getElementById('mainImage').querySelector('img');
 const thumbnails = document.querySelectorAll('#thumbnails img');
+const bodyOverflow = document.querySelector(body);
 
 let currentIndex = 0;
 
@@ -36,6 +37,7 @@ const nextSlide = document.getElementById('nextSlide');
 mainImage.addEventListener('click', () => {
     fullscreenSlider.style.display = 'flex';
     fullscreenImage.src = thumbnails[currentIndex].dataset.full;
+    console.log(bodyOverflow);
 });
 
 // Update fullscreen image with fade
